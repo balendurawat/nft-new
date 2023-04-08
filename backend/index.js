@@ -78,10 +78,11 @@ pp.get("/getnftdata", async (req, res) => {
   });  
 
 
-Moralis.start( {
-    apiKey: MORALIS_API_KEY
-}).then(() => {
+
+  Moralis.start({
+    apiKey: MORALIS_API_KEY,
+  }).then(() => {
     app.listen(port, () => {
-        console.log('Listening to API calls');
-    })
-})
+      console.log(`Listening for API calls`);
+    });
+  });
